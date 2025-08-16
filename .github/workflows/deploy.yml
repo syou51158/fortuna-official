@@ -32,7 +32,10 @@ jobs:
         run: npm ci
       
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          echo "Build completed, checking dist directory:"
+          ls -la dist/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

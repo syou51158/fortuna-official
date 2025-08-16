@@ -9,6 +9,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/fortuna-official/',
+  base: process.env.NODE_ENV === 'production' ? '/fortuna-official/' : '/',
 })
 
